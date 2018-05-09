@@ -19,7 +19,7 @@ os.system("export PATH=$PATH:/opt/cross/bin")
 
 # make dir for toolchain
 bazel_dir = Path("$HOME/crosstoolz")
-if not bazel_dir.is_dir():
+if bazel_dir.is_dir():
     os.system("mkdir $HOME/crosstoolz")
 
 os.chdir("$HOME/crosstoolz")
