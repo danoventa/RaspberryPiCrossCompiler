@@ -31,9 +31,7 @@ os.system("apt-get install -y automake autoconf curl libtool libpng12-dev zlib1g
 os.system('apt-get install -y pkg-config zip gcc g++ zlib1g-dev unzip openjdk-8-jdk')
 os.system('update-alternatives --config java')
 
-# install tensorflow dependencies
-os.system('update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc 100')
-os.system('update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++ 100')
+# may need gcc and g++ version 4.8, keep in mind if future errors
 
 
 print("**********************************************************************************")
