@@ -7,7 +7,8 @@ print("*********************** Running Setup Cross Tools Script ****************
 print("**********************************************************************************")
 
 # download crosstool
-os.system("wget http://crosstool-ng.org/download/crosstool-ng/crosstool-ng-1.23.0.tar.xz")
+if not Path("./crosstool-ng-1.23.0.tar.xz").is_file():
+    os.system("wget http://crosstool-ng.org/download/crosstool-ng/crosstool-ng-1.23.0.tar.xz")
 os.system("tar -xvf crosstool-ng-1.23.0.tar.xz")
 
 os.chdir("./crosstool-ng-1.23.0")
@@ -18,11 +19,11 @@ os.system("make install")
 os.system("export PATH=$PATH:/opt/cross/bin")
 
 # make dir for toolchain
-bazel_dir = Path("$HOME/crosstoolz")
-if bazel_dir.is_dir():
-    os.system("mkdir $HOME/crosstoolz")
+bazel_dir = Path("/root/crosstoolz")
+if not bazel_dir.is_dir():
+    os.system("mkdir /root/crosstoolz")
 
-os.chdir("$HOME/crosstoolz")
+os.chdir("/root/crosstoolz")
 
 # you'll be taken through a journey of settings, follow url for details
 # https://www.bootc.net/archives/2012/05/26/how-to-build-a-cross-compiler-for-your-raspberry-pi/
