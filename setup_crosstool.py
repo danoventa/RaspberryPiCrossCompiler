@@ -19,11 +19,11 @@ os.system("make install")
 os.system("export PATH=$PATH:/opt/cross/bin")
 
 # make dir for toolchain
-bazel_dir = Path("/root/crosstoolz")
+bazel_dir = Path("/root/crosstools")
 if not bazel_dir.is_dir():
-    os.system("mkdir /root/crosstoolz")
+    os.system("mkdir /root/crosstools")
 
-os.chdir("/root/crosstoolz")
+os.chdir("/root/crosstools")
 
 # you'll be taken through a journey of settings, follow url for details
 # https://www.bootc.net/archives/2012/05/26/how-to-build-a-cross-compiler-for-your-raspberry-pi/
