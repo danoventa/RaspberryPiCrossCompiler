@@ -28,11 +28,10 @@ os.system('pip3 install wheel')
 os.system("apt-get install -y automake autoconf curl libtool libpng12-dev zlib1g-dev git wget xz-utils")
 
 # install bazel dependencies
-os.system('apt-get install -y pkg-config zip g++ zlib1g-dev unzip openjdk-8-jdk')
+os.system('apt-get install -y pkg-config zip gcc g++ zlib1g-dev unzip openjdk-8-jdk')
 os.system('update-alternatives --config java')
 
 # install tensorflow dependencies
-os.system('apt-get install -y gcc-4.8 g++-4.8')
 os.system('update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc 100')
 os.system('update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++ 100')
 
