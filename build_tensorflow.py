@@ -25,3 +25,4 @@ os.system('bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorf
 print("**********************************************************************************")
 print("********************** Completed Build Tensorflow Script *************************")
 print("**********************************************************************************")
+
