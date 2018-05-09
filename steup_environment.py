@@ -1,6 +1,5 @@
 import os
 
-
 print("**********************************************************************************")
 print("*********************** Running Setup Environment Script *************************")
 print("**********************************************************************************")
@@ -32,7 +31,6 @@ os.system('apt-get install -y pkg-config zip gcc g++ zlib1g-dev unzip openjdk-8-
 os.system('update-alternatives --config java')
 
 # may need gcc and g++ version 4.8, keep in mind if future errors
-
 
 print("**********************************************************************************")
 print("*********************** Completed Setup Environment Script ***********************")

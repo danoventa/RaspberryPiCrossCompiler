@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 
-
 print("**********************************************************************************")
 print("************************* Running Setup Bazel Script *****************************")
 print("**********************************************************************************")
@@ -28,12 +27,10 @@ try:
 
     os.chdir('..')
 
-
-
-    # cleanup if fails
 except:
     failed = True
 
+# cleanup if fails
 if failed:
     os.system("rm -r tf")
     os.system("rm dep.py")
